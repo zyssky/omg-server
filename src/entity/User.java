@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /** 
  * This class represents the basic user object.
@@ -19,9 +20,8 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
-
-    private static final long serialVersionUID = 4733464888738356502L;
+@XmlRootElement
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,6 +32,29 @@ public class User implements Serializable {
 
     @Column(name = "password", length = 64)
     private String password;
+
+    private double balance;
+    
+    private int credit;
+    
+    public User(){
+    	
+    }
+    
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public User (String username , String password , double balance , int credit){
+    	this.balance = balance;
+    	this.credit = credit;
+    	this.username = username;
+    	this.password = password;
+    }
 
 	public String getUsername() {
 		return username;

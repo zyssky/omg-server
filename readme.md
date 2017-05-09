@@ -30,3 +30,9 @@ maven（eclipse或Myeclipse都会有）
 1，现在不使用spring
 2，无论使用单纯jsp还是servlet或者结合使用或者其他，能跑就行
 3，不会开发的看有关java web，servlet，jsp，hibernate，的相关教学视频（慕课网，极客学院，网易云课堂。。。）
+
+
+2017/5/9 更新：
+1，更新hibernate的使用
+2，添加一些数据库表
+3，添加user的rest操作
