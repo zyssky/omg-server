@@ -1,5 +1,6 @@
 package entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -9,15 +10,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.annotations.GeneratorType;
 
 @Entity
 @Table(name = "order_form")
+@XmlRootElement
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
     private Long userId;
@@ -27,28 +29,36 @@ public class Order {
     private Date dateString;
     
 	private int countNum;
+	
+	private double total;
     
-    private String remark;
-    
-    @Temporal(TemporalType.TIME)
+//    
+//    @Temporal(TemporalType.TIME)
     private Date startTime;
     
-    @Temporal(TemporalType.TIME)
+//    @Temporal(TemporalType.TIME)
     private Date endTime;
     
     public Order(long userId,String courtTitle,int courtNum,Date dateString,
-    		Date startTime,Date endTime, String remark){
+    		Date startTime,Date endTime,double total){
     	this.userId = userId;
     	this.courtTitle = courtTitle;
     	this.dateString = dateString;
     	this.countNum = courtNum;
-    	this.remark = remark;
     	this.startTime = startTime;
     	this.endTime = endTime;
-    	
+    	this.total = total;
     }
     
-    public Order () {
+    public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public Order () {
 		
 	}
     
@@ -95,13 +105,7 @@ public class Order {
 		this.countNum = countNum;
 	}
 
-	public String getRemark() {
-		return remark;
-	}
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
 
 	public Date getStartTime() {
 		return startTime;

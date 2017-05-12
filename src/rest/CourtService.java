@@ -8,11 +8,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.json.JSONObject;
+
 import entity.Court;
 import model.CourtApi;
 import model.HibernateUtil;
 
-@Path("/courts")
+@Path("/court")
 public class CourtService {
 	
 	@GET
@@ -27,4 +29,6 @@ public class CourtService {
 	public Court getCourt(@PathParam("court") String title){
 		return new CourtApi().getCourt(title);
 	}
+	
+	
 }

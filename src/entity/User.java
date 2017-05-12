@@ -2,6 +2,7 @@ package entity;
 
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -35,7 +36,25 @@ public class User {
 
     private double balance;
     
-    private int credit;
+    public double getBalance() {
+    	DecimalFormat decimalFormat = new DecimalFormat("###.00");
+		return Double.parseDouble(decimalFormat.format(balance));
+	}
+
+	public void setBalance(double balance) {
+		DecimalFormat decimalFormat = new DecimalFormat("###.00");
+		this.balance = Double.parseDouble(decimalFormat.format(balance));
+	}
+
+	public int getCredit() {
+		return credit;
+	}
+
+	public void setCredit(int credit) {
+		this.credit = credit;
+	}
+
+	private int credit;
     
     public User(){
     	

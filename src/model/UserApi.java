@@ -134,6 +134,15 @@ public class UserApi {
 		return token.getTokenString();
 	}
 	
+//	public int updateCredit(int value) {
+//		try {
+//			String hql = "update User set "
+//			session.
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+	
 	public int updateUser(User user) {
 		try {
 			session.update(user);

@@ -36,10 +36,10 @@ public class UserService {
 		
 		try {
 			if(token!=null){
-				jsonObject.append("status", 1);
-				jsonObject.append("token", token);
+				jsonObject.put("status", 1);
+				jsonObject.put("token", token);
 			}else{
-				jsonObject.append("status", 0);
+				jsonObject.put("status", 0);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -59,7 +59,12 @@ public class UserService {
 		String token = new UserApi().add(user);
 		JSONObject jsonObject = new JSONObject();
 		try {
-			jsonObject.append("token", token);
+			if(token!=null){
+				jsonObject.put("status", 1);
+				jsonObject.put("token", token);
+			}else{
+				jsonObject.put("status", 0);
+			}
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

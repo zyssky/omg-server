@@ -18,7 +18,7 @@ public class OrderApi {
 	public List<Order>getOrders(long id){
 		List<Order> result = null;
 		try {
-			String hql = "from Order where userId = ?";
+			String hql = "from Order where userId = ? order by dateString desc";
 			result = session.createQuery(hql).setParameter(0, id).list();
 			session.getTransaction().commit();
 			
@@ -47,26 +47,29 @@ public class OrderApi {
 		return order;
 	}
 	
-	public void deleteOrder (long id){
+	public int deleteOrder (long id){
 		try {
 			String hql = "delete from Order where id =?";
 			int row = session.createQuery(hql).setParameter(0, id).executeUpdate();
 			session.getTransaction().commit();
 			System.out.println(row+" row affected");
+			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
 			session.getTransaction().rollback();
 		}
+		return 0;
 	}
 	
-	public void addOrder(Order order){
+	public int addOrder(Order order){
 		try {
 			session.save(order);
 			session.getTransaction().commit();
-			
+			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
 			session.getTransaction().rollback();
 		}
+		return 0;
 	}
 }

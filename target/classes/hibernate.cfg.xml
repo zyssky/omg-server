@@ -34,6 +34,7 @@
 		<mapping class = "entity.Court"/>
 		<mapping class = "entity.Order"/>
 		<mapping class = "entity.Token"/>
+		<mapping class = "entity.Comment"/>
 		
 		
 		
