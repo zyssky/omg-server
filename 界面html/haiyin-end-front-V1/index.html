@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<style>
+  .logo{
+    color: white;
+    font-size: 29px;
+  }
+  li>a:hover{
+    background: #383d4e;
+  }
+</style>
+  <header class="header">
+    <div class="inHeader clearfix">
+      <div class="logo">
+        <!--<img src="image/logo.png" title="我是logo">-->
+        海印又一城后台管理系统
+      </div>
+      <div class="searchbar">
+        <input type="text"><a href="#">登录</a>
+      </div>
+    </div>
+  </header>
+  <section class="my_statement clearfix">
+    <div class="info">
+      <div>
+        <div class="clearfix">
+          <div class="head_pic">
+            <span></span>
+          </div>
+          <strong>ABC123</strong>
+        </div>
+      </div>
+      <ul class="info_list">
+        <li>
+          <a href="javascript:;"><i class="file_open"></i>海印会员CRM数据</a>
+          <ul>
+            <li>
+              <a onclick="a1(event,'a1')"><i class="arrow"></i><i class="file_close"></i>会员办理开通</a>
+            </li>
+            <li  >
+              <a onclick="a1(event,'a2')"><i class="arrow"></i><i class="file_cur"></i>会员资料简查</a>
+            </li>
+            <li>
+              <a onclick="a1(event,'a3')"><i class="arrow"></i><i class="file_close"></i>会员消费记录</a>
+            </li>
+            <li>
+              <a onclick="a1(event,'a4')"><i class="arrow"></i><i class="file_close"></i>充值</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="file_open"></i>王中王管理系统</a>
+          <ul>
+            <li>
+              <a  onclick="a1(event,'b1')"><i class="arrow"></i><i class="file_close"></i>会员级别</a>
+            </li>
+            <li>
+              <a onclick="a1(event,'b2')"><i class="arrow"></i><i class="file_cur"></i>场地信息</a>
+            </li>
+            <li>
+              <a  onclick="a1(event,'b3')"><i class="arrow"></i><i class="file_close"></i>场地预定</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="file_open"></i>会员管理系统</a>
+          <ul>
+            <li>
+              <a onclick="a1(event,'c1')"><i class="arrow"></i><i class="file_close"></i>会员卡等级</a>
+            </li>
+            <li >
+              <a onclick="a1(event,'c2')"><i class="arrow"></i><i class="file_cur"></i>积分规则</a>
+            </li>
+            <li>
+              <a onclick="a1(event,'c3')"><i class="arrow"></i><i class="file_close"></i>兑换策略</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <iframe src="moren.html" class="statement" frameborder="no"  marginwidth="0" marginheight="0" scrolling="yes">
+    </iframe>
+  </section>
+<script>
+  function a1(event,value) {
+      var ele=document.getElementsByTagName("iframe")[0];
+      ele.src=value+"/"+value+".html";
+     /* event.target.style.color="white";*/
+  }
+</script>
+</body>
+</html>

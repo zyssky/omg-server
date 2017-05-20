@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .con {
+        display: flex;
+        width: 821px;
+        position: relative;
+        left: 18%;
+        top: 25px;
+    }
+
+    header span {
+        font-size: 70px;
+        color: #03A9F4;
+    }
+
+    header nav {
+        height: 60px;
+        width: 30%;
+        display: block;
+        vertical-align: middle;
+        position: relative;
+        height: 46px;
+        background: rgba(0, 188, 212, 0.42);
+        width: 100%;
+    }
+
+    nav li {
+        display: inline-block;
+        width: 30%;
+        font-size: 14px;
+        text-align: center;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        background: transparent;
+
+        margin: 0;
+        font-size: 32px;
+
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #con11 {
+        display: flex;
+        margin-left: 375px;
+        margin-top: 100px;
+    }
+
+    #con11 >div {
+        border: solid 2px #8BC34A;
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+    }
+
+    #con11 img {
+        width: 100%;
+        height: 100%;
+    }
+    #con22{
+        margin-left: 401px;
+    }
+    #con22 span{
+        padding: 37px;
+        font-family: cursive;
+        font-size: 27px;
+    }
+    #con33 a{
+
+        background: #157934;
+        position: absolute;
+        margin-top: 22px;
+        left: 34%;
+        height: 61px;
+        width: 348px;
+        color: white;
+        text-align: center;
+        line-height: 55px;
+        font-size: 32px;
+    }
+</style>
+<header>
+    <span id="title">海印体育馆</span>
+
+    <nav>
+        <ul>
+            <li><a href="four.html">会员注册</a></li>
+            <li><a href="one.html">球场预订/查询</a></li>
+            <li><a href="pay.html">充值</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+<div id="con11">
+
+    <div id="weixin"><img src="./image/weixin.jpg"></div>
+    <div id="zhifubao"><img src="./image/zhifubao.jpg"></div>
+</div>
+<div id="con22">
+    <span>微信支付</span>
+    <span>支付宝支付</span>
+</div>
+<div id="con33">
+    <a>确认支付</a>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+
+        var weixin1 = document.getElementById("weixin");
+        weixin1.addEventListener("click", function () {
+
+            weixin1.innerHTML = "aaa";
+
+        }, false);
+
+    }
+</script>
+</body>
+</html>

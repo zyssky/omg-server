@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-ch">
+    <head>
+        <title>To-Do</title>
+        <meta charset="utf-8">
+		<meta http-equiv="Content-Type" charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" media="all" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" media="all" type="text/css" href="css/main.css">
+    </head>
+    <body>
+     <style>
+         .query{
+             border: solid 1px gray;
+             border-radius: 20px;
+         }
+         .query{
+             width: 795px;
+             height: 158px;
+             margin-left: 54px;
+             margin-top: 20px;
+         }
+         .query>div,button{
+             margin-top: 15px;
+             margin-left: 300px;
+         }
+         button{
+             background: #2196F3;
+             color: white;
+             border: none;
+             border-radius: 10px;
+         }
+         input{
+             background-color: #eeeeed;
+             border: solid 1px black;
+         }
+         #qujian>input{
+             width: 66px;
+         }
+     </style>
+     <div class="query">
+         <div>
+             <label for="name">会员名:</label><input id="name"type="text">
+         </div>
+         <div>
+       <label for="id">会员号:</label><input id="id" type="text"><br>
+         </div>
+         <div id="qujian">
+             <label>充值区间:</label><input type="text">-<input type="text">
+         </div>
+         <button>搜索</button>
+     </div>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>    

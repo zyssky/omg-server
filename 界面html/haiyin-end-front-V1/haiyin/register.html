@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style scoped>
+    header{
+        text-align: center;
+        color: #03A9F4;
+    }
+    form{
+        border: solid 1px gray;
+        width: 322px;
+        height: 408px;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 16px;
+    }
+    .msg{
+        margin: 33px;
+
+    }
+    #log{
+        background: #03A9F4;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        width: 62px;
+        height: 38px;
+
+        position: absolute;
+        left: 40%;
+
+        font-size: 18px;
+    }
+
+</style>
+<header>
+    <h1>用户注册</h1>
+</header>
+<form>
+    <div class="msg">
+        <label for="name">用户名称：</label>
+        <input id="name">
+    </div>
+    <div class="msg">
+        <label for="pwd"> 输入密码：</label>
+        <input id="pwd">
+    </div>
+    <div class="msg">
+        <label for="repwd">确认密码：</label>
+        <input id="repwd">
+    </div>
+    <div class="msg">
+        <label for="tel"> 手机号码：</label>
+        <input id="tel">
+    </div>
+    <div class="msg">
+        <label for="sex"> 输入性别：</label>
+        <input id="sex">
+    </div>
+    <input id="log" type="submit" value="注册">
+
+</form>
+</body>
+</html>
